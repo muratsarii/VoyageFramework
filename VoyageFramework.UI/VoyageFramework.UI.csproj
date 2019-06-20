@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45AA73FB-4C80-4974-80B8-8123B402B8B4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VoyageFramework.UI</RootNamespace>
+    <AssemblyName>VoyageFramework.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAnaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnaMenu.Designer.cs">
+      <DependentUpon>frmAnaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBusInformatin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBusInformatin.Designer.cs">
+      <DependentUpon>frmBusInformatin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomer.Designer.cs">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDrivers.Designer.cs">
+      <DependentUpon>frmDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHosts.Designer.cs">
+      <DependentUpon>frmHosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRoute.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRoute.Designer.cs">
+      <DependentUpon>frmRoute.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSeatInformatıon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeatInformatıon.Designer.cs">
+      <DependentUpon>frmSeatInformatıon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTicketSales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTicketSales.Designer.cs">
+      <DependentUpon>frmTicketSales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmAnaMenu.resx">
+      <DependentUpon>frmAnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBusInformatin.resx">
+      <DependentUpon>frmBusInformatin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomer.resx">
+      <DependentUpon>frmCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDrivers.resx">
+      <DependentUpon>frmDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHosts.resx">
+      <DependentUpon>frmHosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRoute.resx">
+      <DependentUpon>frmRoute.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeatInformatıon.resx">
+      <DependentUpon>frmSeatInformatıon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTicketSales.resx">
+      <DependentUpon>frmTicketSales.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VoyageFramework.Entities\VoyageFramework.Entities.csproj">
+      <Project>{ab133ad9-a492-47ae-9077-8e254e846456}</Project>
+      <Name>VoyageFramework.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VoyageFramework\VoyageFramework.csproj">
+      <Project>{6e924dc4-d80f-436f-abf7-477d7a1435de}</Project>
+      <Name>VoyageFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

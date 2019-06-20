@@ -1,0 +1,16 @@
+C:\Users\Kemal\source\repos\Marathon 190226_OOP2\VoyageFramework.DAL\obj\Debug\VoyageFramework.DAL.csprojAssemblyReference.cache
+C:\Users\Kemal\source\repos\Marathon 190226_OOP2\VoyageFramework.DAL\obj\Debug\VoyageFramework.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\obj\Debug\VoyageFramework.DAL.csprojAssemblyReference.cache
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\obj\Debug\VoyageFramework.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\VoyageFramework.DAL.dll.config
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\VoyageFramework.DAL.dll
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\VoyageFramework.DAL.pdb
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\VoyageFramework.Entities.dll
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\VoyageFramework.Entities.pdb
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\obj\Debug\VoyageFramework.DAL.csproj.CopyComplete
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\obj\Debug\VoyageFramework.DAL.dll
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.DAL\obj\Debug\VoyageFramework.DAL.pdb

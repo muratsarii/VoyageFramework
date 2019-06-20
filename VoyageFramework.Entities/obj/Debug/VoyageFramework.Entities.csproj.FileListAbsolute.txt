@@ -1,0 +1,6 @@
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.Entities\bin\Debug\VoyageFramework.Entities.dll
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.Entities\bin\Debug\VoyageFramework.Entities.pdb
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.Entities\obj\Debug\VoyageFramework.Entities.csprojAssemblyReference.cache
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.Entities\obj\Debug\VoyageFramework.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.Entities\obj\Debug\VoyageFramework.Entities.dll
+C:\Users\Kemal\Desktop\Marathon 190226_OOP2\VoyageFramework.Entities\obj\Debug\VoyageFramework.Entities.pdb

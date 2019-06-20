@@ -1,0 +1,128 @@
+CREATE DATABASE BusAutomation
+GO
+
+CREATE TABLE Bus
+(
+	BusId INT NOT NULL CONSTRAINT PK_BusId IDENTITY(1,1),
+	LuxurybusId FOREIGN KEY REFERENCES LuxuryBus(LuxuryBusId),
+	StandardbusId FOREIGN KEY REFERENCES StandardBus(StandardBusId),
+	Make NVARCHAR(50),
+	Plate NVARCHAR (50),
+)
+
+GO
+
+CREATE TABLE BusExpedition 
+(
+	BusExpeditionId INT NOT NULL CONSTRAINT PK_BusExpeditionId IDENTITY(1,1),
+	BusId INT NOT NULL FOREIGN KEY REFERENCES Bus(BusId),
+	DriverId INT NOT NULL FOREIGN KEY REFERENCES Driver(DriverId),
+	HostId INT NOT NULL FOREIGN KEY REFERENCES Host(HostId),
+	HasSnackService BIT NOT NULL,
+	HasDeley BIT NOT NULL,
+	EstimatedArrivalTime DATETIME NOT NULL,
+	EstimatedDepartureTime DATETIME,
+	DepartureTime DATETIME NOT NULL,
+	Code NVARCHAR(50)
+)
+
+GO
+
+CREATE TABLE Driver
+(
+	DriverId INT NOT NULL CONSTRAINT PK_DriverId PRIMARY KEY IDENTITY(1,1),
+	PersonId INT NOT NULL FOREIGN KEY REFERENCES People(PersonId),
+	Licencetype INT
+)
+
+GO
+
+CREATE TABLE Person
+(
+	PersonId INT NOT NULL CONSTRAINT PK_PersonId PRIMARY KEY IDENTITY(1,1),
+	FirstName NVARCHAR(50),
+	LastName NVARCHAR(50),
+	FullName NVARCHAR(50),
+	Age INT NOT NULL,
+	TcNo NVARCHAR(11),
+	Gender INT NOT NULL
+)
+
+GO
+
+CREATE TABLE Host
+(
+	HostId INT NOT NULL CONSTRAINT PK_HostId PRIMARY KEY IDENTITY(1,1),
+	PersonId INT NOT NULL FOREIGN KEY REFERENCES People(PersonId)
+)
+
+GO
+
+CREATE TABLE Customer 
+(
+	CustomerId INT CONSTRAINT PK_CustomerId PRIMARY KEY IDENTITY(1,1),
+	PersonId INT NOT NULL FOREIGN KEY REFERENCES Person(PersonId),
+	TelNo NVARCHAR(11)
+)
+
+GO
+
+CREATE TABLE LuxuryBus
+(
+	LuxuryBusId INT NOT NULL CONSTRAINT PK_BusId IDENTITY (1,1),
+	BusId INT NOT NULL FOREIGN KEY REFERENCES Bus(BusId),
+	Capacity INT NOT NULL ,
+	HasToilet BIT NOT NULL
+)
+
+GO
+
+CREATE TABLE Rota
+(
+	RouteId INT NOT NULL CONSTRAINT PK_RouteId IDENTITY (1,1),
+	RouteName NVARCHAR(50),
+	DepartureLocation NVARCHAR(50),
+	ArrivalLocation NVARCHAR(50),
+	Distance INT NOT NULL,
+	BreakCount INT NOT NULL,
+	BasePrice MONEY
+)
+
+GO
+
+CREATE TABLE SeatInformation
+(
+	SeatNumber INT NOT NULL CONSTRAINT PK_SeatNumber PRIMARY KEY IDENTITY(1,1),
+	Section INT NOT NULL,
+	Category INT NOT NULL
+)
+
+CREATE TABLE StandartBus
+(
+	StandartBusId INT NOT NULL CONSTRAINT PK_BusId IDENTITY(1,1),
+	BusId INT NOT NULL FOREIGN KEY REFERENCES Bus(BusId),
+	Capacity INT NOT NULL,
+	HasToilet BIT NOT NULL,
+)
+
+GO
+
+CREATE TABLE TicketSales
+(
+	TicketId INT NOT NULL CONSTRAINT PK_TicketId PRIMARIY KEY IDENTITY(1,1),
+	BusExpeditionId INT NOT NULL FOREIGN KEY REFERENCES BusExpedition(BusExpeditionId),
+	SeatInformationId INT NOT NULL FOREIGN KEY REFERENCES SeatInformation(SeatInformationId),
+	PersonId INT NOT NULL FOREIGN KEY REFERENCES Person(PersonId),
+	PaidAmount MONEY NOT NULL
+)
+
+GO
+
+CREATE TABLE BusType
+(
+	BusTypeId INT CONSTRAINT PK_BusTypeId PRIMARY KEY IDENTITY(1,1),
+	LuxuryBusId FOREIGN KEY REFERENCES LuxuryBus(LuxuryBusId),
+	StandardBusId FOREIGN KEY REFERENCES StandartBus(StandardBusId),
+	Luxurybus LuxuryBus,
+	Standardbus StandardBus
+)
